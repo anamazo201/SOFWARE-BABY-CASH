@@ -1,0 +1,35 @@
+.productos  {
+    width: 100%;
+    
+}
+.contenedor_productos  {
+    width: 100%;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-between;
+}
+
+  .divider{
+    height:1px;
+    width:100%;
+    background:var(--border);
+    margin:6px 0;
+  }
+
+  .filtros {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filtros label {
+  font-weight: bold;
+}
+
+.filtros select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}

@@ -1,0 +1,40 @@
+:root{
+      --size: 72px;       /* diámetro del loader */
+      --thickness: 6px;   /* grosor del anillo  */
+      --speed: 0.9s;      /* velocidad de giro  */
+      --color: #2563eb;   /* color del borde activo */
+      --bg: #f8fafc;      /* fondo */
+      --ring: #e5e7eb;    /* color del borde pasivo */
+    }
+
+    /* Centro en pantalla completa */
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;  /* ancho total de la ventana */
+      height: 100vh; /* altura total de la ventana */
+      
+
+      /* min-height: 100dvh; /* viewport seguro en móviles */
+      /*background: var(--bg);*/
+    }
+
+    /* Loader tipo anillo */
+    .spinner {
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      border: var(--thickness) solid var(--ring);
+      border-top-color: var(--color); /* “sector” que gira */
+      animation: spin var(--speed) linear infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Respeta preferencias de reducir movimiento */
+    @media (prefers-reduced-motion: reduce) {
+      .spinner { animation: none; }
+    }
